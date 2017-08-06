@@ -1,2 +1,4 @@
 build-redshift-qt-Desktop-Debug/
+build-redshift-qt-Desktop-Release/
+build-redshift-qt-Desktop-Profile/
 redshift-qt/redshift-qt.pro.user
