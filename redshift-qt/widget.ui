@@ -77,9 +77,12 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="closeButton">
         <property name="text">
          <string>Close</string>
+        </property>
+        <property name="default">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -90,5 +93,22 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>128</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>79</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

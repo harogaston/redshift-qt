@@ -38,6 +38,7 @@ Widget::Widget(QWidget *parent) :
     trayIconMenu->addAction(autostartAction);
 
     QAction *infoAction = new QAction(tr("&Info"), this);
+    connect(infoAction, SIGNAL(triggered()), this, SLOT(showNormal()));
     trayIconMenu->addAction(infoAction);
 
     QAction *quitAction = new QAction(tr("&Quit"), this);
@@ -50,11 +51,6 @@ Widget::Widget(QWidget *parent) :
 Widget::~Widget()
 {
     delete ui;
-}
-
-void Widget::closeButtonClicked()
-{
-    hide();
 }
 
 void Widget::closeEvent(QCloseEvent *event) {
